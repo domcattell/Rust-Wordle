@@ -45,8 +45,8 @@ fn main() {
         if !is_in_words_list(guess.clone()) {
             println!("\x1b[33mWord not in words list!\x1b[0m");
             continue;
-        }  
-        
+        }
+
         if guessed_words.len() > 0 && guessed_words.iter().any(|x| x.clone() == guess) {
             println!("\x1b[33mWord already guessed!\x1b[0m");
             continue;
@@ -59,7 +59,7 @@ fn main() {
                 break;
             }
         }
-        
+
         attempts_left -= 1;
     }
 
